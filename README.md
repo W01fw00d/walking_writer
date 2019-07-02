@@ -1,2 +1,4 @@
 # walking_writer
-An app to produce random phrases
+An app that produces random phrases
+
+Uses https://noopschallenge.com/challenges/wordbot API as a english words dictionary
