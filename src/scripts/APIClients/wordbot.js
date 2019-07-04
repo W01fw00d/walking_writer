@@ -3,7 +3,7 @@ const API_URL_COUNT = 'https://api.noopschallenge.com/wordbot?count=';
 
 const ERROR_MSG = 'API call failed';
 
-class APIClient {
+class Wordbot {
   getFullSet(n) {
     let words = {};
 
@@ -17,23 +17,15 @@ class APIClient {
           words.verbs = JSON.parse(data).words;
 
           this.getAdjectives(n).then(data => {
-            words.verbs = JSON.parse(data).words;
+            words.adjectives = JSON.parse(data).words;
 
-            this.getAdjectives(n).then(data => {
-              words.adjectives = JSON.parse(data).words;
+            this.getAdverbs(n).then(data => {
+              words.adverbs = JSON.parse(data).words;
 
-              this.getAdverbs(n).then(data => {
-                words.adverbs = JSON.parse(data).words;
+              this.getPrepositions(n).then(data => {
+                words.prepositions = JSON.parse(data).words;
 
-                this.getAdverbs(n).then(data => {
-                  words.adverbs = JSON.parse(data).words;
-
-                  this.getPrepositions(n).then(data => {
-                    words.adverbs = JSON.parse(data).words;
-
-                    resolve(words);
-                  })
-                })
+                resolve(words);
               })
             })
           })

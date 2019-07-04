@@ -1,39 +1,7 @@
 body {
-  margin: 0;
   text-align: center;
 }
+
 div {
-  display: inline-block;
   margin: 20px auto 0 auto;
-  position: relative;
-}
-canvas {
-  display: inline-block;
-}
-
-.canvas_wrapper {
-  text-align: center;
-  margin: 0;
-}
-.title {
-  color: #a02040;
-}
-
-.button_wrapper {
-  display: block;
-}
-
-.audioButton {
-  background-color: #a02040;
-  color: #f5e8eb;
-
-  border-style: solid;
-  border-width: 2px;
-  border-color: #d9a5b2;
-
-  font-size: 18px;
-}
-
-.audioButton.pressed {
-  background-color: #b34c66;
 }
